@@ -19,6 +19,12 @@
            fetch="https://github.com/DerpLab"
            revision="refs/heads/ten" />
 
+  <remote  name="my-cp-stuff"
+           fetch="https://github.com/my-cp-stuff" />
+           
+  <remote  name="Erickeagle3"
+           fetch="https://github.com/Erickeagle3" />
+
   <!-- AOSiP -->
   <!-- General -->
   <project path="art" name="platform_art" remote="derp" />
@@ -44,10 +50,11 @@
   </project>
 
   <!-- Device -->
-  <project path="device/aosip/sepolicy" name="device_aosip_sepolicy" remote="derp" />
+  <project path="device/aosip/sepolicy" name="device_aosip_sepolicy" remote="my-cp-stuff" revision="ten" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="derp" />
   <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy" remote="aosip" revision="ten-legacy" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="derp" revision="ten-legacy-um" />
+  <project path="device/xiaomi/mido" name="privet-work" remote="Erickeagle3" revision="wip2" />
 
   <!-- External -->
   <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="aosip" />
@@ -68,7 +75,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="platform_frameworks_av" remote="derp" />
-  <project path="frameworks/base" name="platform_frameworks_base" remote="derp" />
+  <project path="frameworks/base" name="platform_frameworks_base-2" remote="my-cp-stuff" revision="ten" />
   <project path="frameworks/compile/mclinker" name="platform_frameworks_compile_mclinker" remote="aosip" />
   <project path="frameworks/native" name="platform_frameworks_native" remote="derp" />
   <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" remote="aosip" />
@@ -102,7 +109,7 @@
   <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc" remote="derp" />
   <project path="packages/apps/PermissionController" name="platform_packages_apps_PackageInstaller" remote="aosip" />
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon" remote="derp" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="derp" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="my-cp-stuff" revision="ten" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="derp" />
   <project path="packages/apps/Snap" name="platform_packages_apps_Snap" remote="aosip" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="derp" />
@@ -128,11 +135,12 @@
   <project path="system/vold" name="platform_system_vold" remote="derp" />
 
   <!-- Vendor -->
-  <project path="vendor/aosip" name="platform_vendor_aosip" remote="derp" />
+  <project path="vendor/aosip" name="platform_vendor_aosip" remote="my-cp-stuff" revision="ten" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" remote="derp" />
   <project path="vendor/overlay" name="platform_vendor_overlay" remote="derp" />
   <project path="vendor/prebuilts" name="platform_vendor_prebuilts" remote="derp" />
   <project path="vendor/qcom/opensource/cryptfs_hw" name="platform_vendor_qcom_opensource_cryptfs_hw" remote="aosip" />
+  <project path="vendor/xiaomi" name="privet-vendor" remote="Erickeagle3" revision="wip1" />
 
   <!-- DerpFest specific stuf -->
   <project path="packages/apps/DerpQuest" name="platform_packages_apps_DerpQuest" remote="derp" />
@@ -153,5 +161,11 @@
   <project path="vendor/gapps" name="DerpFest/vendor_gapps" remote="gitlab" revision="ten" clone-depth="1" />
   <project path="vendor/google-customization" name="platform_vendor_google-customization" remote="derp" revision="ten" />
   <project path="vendor/pixelstyle" name="platform_vendor_pixelstyle" remote="derp" />
+  
+  <!-- kernel -->
+  <project path="kernel/xiaomi/mido" name="underground-kernel" remote="my-cp-stuff" revision="perf-10" />
+
+  <!-- faceunlock -->
+  <project path="external/utils" name="faceunlock-utils" remote="my-cp-stuff" revision="ten" />
 
 </manifest>
